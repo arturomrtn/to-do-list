@@ -8,11 +8,9 @@ function App() {
     <>
       <div>
         <TareaForm />
-       <h1>Lista de tareas</h1>
-       <div>
-        <Tarea texto={'Soy una tarea'} ></Tarea>
-       </div>
       </div>
+      <h1>Mis tareas</h1>
+      <Tarea texto={'Soy una tarea'}></Tarea>
     </>
   )
 }
