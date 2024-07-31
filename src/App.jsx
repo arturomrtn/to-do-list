@@ -1,16 +1,14 @@
 import './App.css'
-import Tarea from './components/Tarea'
-import TareaForm from './components/TareaForm'
+import TareaList from './components/TareaList'
 
 function App() {
 
   return (
     <>
       <div>
-        <TareaForm />
+        <TareaList />
       </div>
-      <h1>Mis tareas</h1>
-      <Tarea texto={'Soy una tarea'}></Tarea>
+     
     </>
   )
 }

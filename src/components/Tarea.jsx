@@ -1,11 +1,9 @@
 import '../styles/Tarea.css'
 
-function Tarea ({ texto }) {
+function Tarea ({ text }) {
     return (
         <div className="tarea-contenedor">
-            <div className="tarea-texto">
-                {texto}
-            </div>
+                <h1>soy una tarea: {text}</h1>
         </div>
     );
 }
