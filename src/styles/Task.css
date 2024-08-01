@@ -1,8 +1,4 @@
-.tarea-contenedor {
+.task-container {
     background-color: #1b2a;
     border-radius: 2rem;
-}
-
-.tarea-texto {
-    height: 25px;
 }

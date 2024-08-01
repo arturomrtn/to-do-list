@@ -1,7 +1,7 @@
-import '../styles/TareaForm.css'
+import '../styles/TaskForm.css'
 import { useState } from 'react';
 
-function TareaForm(props) {
+function TaskForm( {addTask}) {
 
 const [input, setInput] = useState("")
 
@@ -12,26 +12,26 @@ const handleInputChange = e => {
 const handleSubmit = e => {
     e.preventDefault();
 
-    const tareaNueva = {
-        texto: input
+    const newTask = {
+        text: input
     }
 
-    props.onSubmit(tareaNueva); 
+    addTask(newTask); 
 
 }
 
     return (
         <form className="form" onSubmit={handleSubmit}>
             <input
-                className="tarea-input"
+                className="task-input"
                 type='text'
-                placeholder="Escribe aquí"
-                name='texto'
+                placeholder="Write here"
+                name='text'
                 onChange={handleInputChange}
             />
             <button 
             className="button-tarea"
-            >Añadir tarea</button>
+            >Add task</button>
             <div>
             </div>
         </form>
@@ -40,4 +40,4 @@ const handleSubmit = e => {
     );
 }
 
-export default TareaForm;
+export default TaskForm;

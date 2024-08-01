@@ -1,12 +1,12 @@
 import './App.css'
-import TareaList from './components/TareaList'
+import TaskList from './components/TaskList'
 
 function App() {
 
   return (
     <>
       <div>
-        <TareaList />
+        <TaskList />
       </div>
      
     </>
