@@ -1,17 +1,23 @@
 import '../styles/TareaForm.css'
 import { useState } from 'react';
 
-function TareaForm() {
+function TareaForm(props) {
 
-const [text, setText] = useState("")
+const [input, setInput] = useState("")
 
 const handleInputChange = e => {
-    setText(e.target.value)
+    setInput(e.target.value)
 }
 
 const handleSubmit = e => {
-    e.prevent.default();
-    console.log('sending form..')
+    e.preventDefault();
+
+    const tareaNueva = {
+        texto: input
+    }
+
+    props.onSubmit(tareaNueva); 
+
 }
 
     return (
@@ -20,11 +26,9 @@ const handleSubmit = e => {
                 className="tarea-input"
                 type='text'
                 placeholder="Escribe aquí"
-                name='text'
-                value={text}
+                name='texto'
                 onChange={handleInputChange}
             />
-            {console.log(text)}
             <button 
             className="button-tarea"
             >Añadir tarea</button>
